@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>For Recruiters | Deborah Burke-Allen, RPh</title>
-<meta name="description" content="Recruiter kit for Deborah M. Burke-Allen, RPh: candidate snapshot, copy-ready summary, and resumes and Job Alignment Documents for clinical pharmacy, managed care, supplements and diagnostics, and clinical content roles.">
+<meta name="description" content="Recruiter kit for Deborah M. Burke-Allen, RPh: candidate snapshot, copy-ready summary, Candidate Packets for clinical pharmacy, managed care, supplements and diagnostics, clinical content, and clinical AI roles, plus evidence-verified work samples.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://deborahburkeallen.github.io/recruiters.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -122,6 +122,9 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
 .btn.line{ border:1px solid var(--line); color:var(--ink); background:transparent; }
 .btn.line:hover{ background:var(--ghost-hover); }
 .wide-btn{ width:100%; justify-content:center; }
+@supports (grid-template-rows: subgrid){ .packets .sector{ display:grid; grid-template-rows:subgrid; grid-row:span 5; gap:10px; } .packets .dl{ margin-top:0; padding-top:4px; align-self:end; } .packets .samples{ margin-top:0; align-self:start; } }
+.btn{ white-space:nowrap; }
+@media (max-width:360px){ .wide-btn .fmt{ display:none; } }
 .singles{ width:100%; display:flex; justify-content:center; gap:10px; font-size:13px; color:var(--soft); }
 .singles a{ color:var(--ink); font-weight:500; text-underline-offset:3px; padding:6px 2px; }
 .singles a:hover{ color:var(--btn-hover); }
@@ -129,6 +132,7 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
 .samples{ width:100%; border-top:1px solid var(--line); margin-top:4px; padding-top:10px; display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:6px 8px; }
 .samples .sl{ width:100%; text-align:center; font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--soft); }
 .samples a{ font-size:13px; font-weight:500; color:var(--ink); text-decoration:none; padding:6px 10px; border-radius:999px; border:1px solid var(--line); background:var(--ground); }
+.samples .kx{ font-size:13px; font-weight:500; color:var(--ink); padding:6px 10px; border-radius:999px; background:var(--card); border:1px dashed var(--line); }
 .samples a:hover{ background:var(--ghost-hover); }
 .samples a:focus-visible{ outline:3px solid var(--gold-line); outline-offset:2px; }
 .more{ display:flex; flex-wrap:wrap; gap:10px; }
@@ -156,17 +160,17 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
     <div><dt>Education</dt><dd>BS in Pharmacy<small>Albany College of Pharmacy and Health Sciences</small></dd></div>
     <div><dt>Location</dt><dd>Charlotte, NC<small>Remote or hybrid</small></dd></div>
     <div><dt>Employment</dt><dd>Full-time preferred<small>Open to contract-to-hire</small></dd></div>
-    <div><dt>Most recent</dt><dd>Infinite Health PLLC<small>Integrative Pharmacist, 2015 - May 2026</small></dd></div>
+    <div><dt>Most recent</dt><dd>Infinite Health PLLC<small>Integrative Pharmacist, 2015 to May 2026</small></dd></div>
   </dl>
 
   <h2>Copy-ready summary</h2>
   <div class="blurb">
-    <p id="sum">Deborah M. Burke-Allen, RPh - Registered pharmacist (NC #14013, issued under Deborah M. Allen) with 25+ years in healthcare. 15 years as a supervising pharmacist at Target: order verification, technician supervision, prior authorizations, and Medicaid claim resolution. Then a decade at an integrative medical practice building clinical systems, complex regimen review, lab interpretation, practitioner education, and a private-label supplement line of about $360,000 a year. Daily UpToDate and PubMed user who applies AI with every claim verified. Based in Charlotte, NC; open to remote or hybrid roles.</p>
+    <p id="sum">Deborah M. Burke-Allen, RPh, is a registered pharmacist (NC #14013, issued under Deborah M. Allen) with 25+ years in healthcare. She spent 15 years as a supervising pharmacist at Target, leading pharmacy teams, verifying orders, and resolving prior authorizations and Medicaid claims. She then spent a decade at an integrative medical practice, where she built the clinical systems, reviewed complex medication and supplement regimens, interpreted functional and conventional labs, mentored MDs, DOs, and NPs, and co-developed a private-label supplement line of about $360,000 a year. She uses AI tools to work faster, verifying every claim against primary sources. Based in Charlotte, NC; open to remote or hybrid roles; full-time preferred.</p>
     <div class="row"><button class="copy" id="copysum" type="button" aria-label="Copy summary"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="cl">Copy summary</span></button></div>
   </div>
 
   <h2>Candidate Packets by sector</h2>
-  <div class="sectors">
+  <div class="sectors packets">
     <article class="sector">
       <div class="sh"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 3.5a5 5 0 0 1 7 7l-7 7a5 5 0 0 1-7-7z"/><path d="m7 10 7 7"/></svg><h3>Clinical and Dispensing Pharmacy</h3></div>
       <p>Clinical, dispensing, and pharmacy leadership roles: long-term care, retail, outpatient, and specialty pharmacy.</p>
@@ -174,8 +178,8 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
       <div class="dl">
         <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Candidate-Packet-Clinical-Pharmacy.pdf" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Candidate Packet <span class="fmt">PDF, 4 PAGES</span></a>
         <div class="singles"><a href="Deborah-M-Burke-Allen-Resume-Clinical-Pharmacy.pdf" target="_blank" rel="noopener">Resume only</a><span aria-hidden="true">|</span><a href="Deborah-M-Burke-Allen-Job-Alignment-Clinical-Pharmacy.pdf" target="_blank" rel="noopener">Job Alignment only</a></div>
-        <div class="samples"><span class="sl">Work samples</span><a href="Deborah-M-Burke-Allen-Work-Sample-Histamine-Sleep-Nervous-System.pdf" target="_blank" rel="noopener">Histamine and Sleep</a></div>
       </div>
+      <div class="samples"><span class="sl">Work samples</span><a href="Deborah-M-Burke-Allen-Work-Sample-Histamine-Sleep-Nervous-System.pdf" target="_blank" rel="noopener">Histamine and Sleep</a></div>
     </article>
     <article class="sector">
       <div class="sh"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.2 8 9 4.6-.8 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><h3>Managed Care and Pharmacy Benefits</h3></div>
@@ -185,6 +189,7 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
         <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Candidate-Packet-Managed-Care-Pharmacy-Benefits.pdf" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Candidate Packet <span class="fmt">PDF, 4 PAGES</span></a>
         <div class="singles"><a href="Deborah-M-Burke-Allen-Resume-Managed-Care-Pharmacy-Benefits.pdf" target="_blank" rel="noopener">Resume only</a><span aria-hidden="true">|</span><a href="Deborah-M-Burke-Allen-Job-Alignment-Managed-Care-Pharmacy-Benefits.pdf" target="_blank" rel="noopener">Job Alignment only</a></div>
       </div>
+      <div class="samples"><span class="sl">Key experience</span><span class="kx">Prior authorizations</span><span class="kx">Medicaid claims</span><span class="kx">Formulary alternatives</span></div>
     </article>
     <article class="sector">
       <div class="sh"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 14h9"/></svg><h3>Supplements, Nutrition, and Diagnostics</h3></div>
@@ -193,8 +198,8 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
       <div class="dl">
         <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Candidate-Packet-Supplements-Nutrition-Diagnostics.pdf" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Candidate Packet <span class="fmt">PDF, 4 PAGES</span></a>
         <div class="singles"><a href="Deborah-M-Burke-Allen-Resume-Supplements-Nutrition-Diagnostics.pdf" target="_blank" rel="noopener">Resume only</a><span aria-hidden="true">|</span><a href="Deborah-M-Burke-Allen-Job-Alignment-Supplements-Nutrition-Diagnostics.pdf" target="_blank" rel="noopener">Job Alignment only</a></div>
-        <div class="samples"><span class="sl">Work samples</span><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Supplements.pdf" target="_blank" rel="noopener">The Why Behind Supplements</a><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Testing.pdf" target="_blank" rel="noopener">The Why Behind Testing</a><a href="Deborah-M-Burke-Allen-Work-Sample-Science-Behind-Inflammatory-Foods.pdf" target="_blank" rel="noopener">Inflammatory Foods</a></div>
       </div>
+      <div class="samples"><span class="sl">Work samples</span><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Supplements.pdf" target="_blank" rel="noopener">The Why Behind Supplements</a><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Testing.pdf" target="_blank" rel="noopener">The Why Behind Testing</a><a href="Deborah-M-Burke-Allen-Work-Sample-Science-Behind-Inflammatory-Foods.pdf" target="_blank" rel="noopener">Inflammatory Foods</a></div>
     </article>
     <article class="sector">
       <div class="sh"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 12h8M8 16h5M8 8h4"/></svg><h3>Clinical Content, Medical Affairs, and Health Tech</h3></div>
@@ -203,8 +208,8 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
       <div class="dl">
         <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Candidate-Packet-Clinical-Content-Health-Tech.pdf" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Candidate Packet <span class="fmt">PDF, 4 PAGES</span></a>
         <div class="singles"><a href="Deborah-M-Burke-Allen-Resume-Clinical-Content-Health-Tech.pdf" target="_blank" rel="noopener">Resume only</a><span aria-hidden="true">|</span><a href="Deborah-M-Burke-Allen-Job-Alignment-Clinical-Content-Health-Tech.pdf" target="_blank" rel="noopener">Job Alignment only</a></div>
-        <div class="samples"><span class="sl">Work samples</span><a href="Deborah-M-Burke-Allen-Work-Sample-Histamine-Sleep-Nervous-System.pdf" target="_blank" rel="noopener">Histamine and Sleep</a><a href="Deborah-M-Burke-Allen-Work-Sample-Science-Behind-Inflammatory-Foods.pdf" target="_blank" rel="noopener">Inflammatory Foods</a><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Testing.pdf" target="_blank" rel="noopener">The Why Behind Testing</a></div>
       </div>
+      <div class="samples"><span class="sl">Work samples</span><a href="Deborah-M-Burke-Allen-Work-Sample-Histamine-Sleep-Nervous-System.pdf" target="_blank" rel="noopener">Histamine and Sleep</a><a href="Deborah-M-Burke-Allen-Work-Sample-Science-Behind-Inflammatory-Foods.pdf" target="_blank" rel="noopener">Inflammatory Foods</a><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Testing.pdf" target="_blank" rel="noopener">The Why Behind Testing</a></div>
     </article>
     <article class="sector">
       <div class="sh"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6v6H9zM9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg><h3>Clinical AI and Pharmacy Informatics</h3></div>
@@ -213,8 +218,8 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
       <div class="dl">
         <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Candidate-Packet-Clinical-AI-Informatics.pdf" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Candidate Packet <span class="fmt">PDF, 4 PAGES</span></a>
         <div class="singles"><a href="Deborah-M-Burke-Allen-Resume-Clinical-AI-Informatics.pdf" target="_blank" rel="noopener">Resume only</a><span aria-hidden="true">|</span><a href="Deborah-M-Burke-Allen-Job-Alignment-Clinical-AI-Informatics.pdf" target="_blank" rel="noopener">Job Alignment only</a></div>
-        <div class="samples"><span class="sl">Work samples</span><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Testing.pdf" target="_blank" rel="noopener">The Why Behind Testing</a></div>
       </div>
+      <div class="samples"><span class="sl">Work samples</span><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Testing.pdf" target="_blank" rel="noopener">The Why Behind Testing</a></div>
     </article>
   </div>
   <p class="note">Each Candidate Packet is the resume followed by the Job Alignment Document, with bookmarks for each. For an applicant tracking system, please upload the <b>Resume only</b> file. Every resume is tested for ATS: plain text, standard headings, and the name on the first line.</p>
