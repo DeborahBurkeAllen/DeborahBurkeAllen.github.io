@@ -148,6 +148,27 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
 .chips{ display:flex; flex-wrap:wrap; gap:6px; }
 .chips span{ font-size:12.5px; font-weight:500; padding:4px 10px; border-radius:999px; background:var(--card); color:var(--ink); border:1px solid var(--line); }
 .chips .k{ background:transparent; border:none; font-weight:600; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--soft); padding:4px 4px 4px 0; width:100%; text-align:left; }
+.jump{ position:sticky; top:0; z-index:5; margin:22px -16px 0; padding:10px 16px; background:color-mix(in srgb, var(--ground) 92%, transparent); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; }
+.jump::-webkit-scrollbar{ display:none; }
+.jump a{ flex:none; font-size:13.5px; font-weight:600; color:var(--ink); text-decoration:none; padding:8px 12px; border-radius:999px; border:1px solid var(--line); background:var(--card); min-height:36px; display:inline-flex; align-items:center; }
+.jump a:hover{ background:var(--ghost-hover); }
+.jump a:focus-visible{ outline:3px solid var(--gold-line); outline-offset:2px; }
+.actions{ display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+.updated{ font-size:12.5px; color:var(--soft); margin-top:10px; }
+h2{ scroll-margin-top:72px; }
+.help{ font-size:14px; color:var(--soft); margin:-4px 0 14px; max-width:62ch; }
+details.full{ margin-top:12px; border-top:1px solid var(--line); padding-top:10px; }
+details.full summary{ cursor:pointer; font-weight:600; font-size:14px; color:var(--ink); min-height:36px; display:flex; align-items:center; }
+details.full p{ margin-top:8px; color:var(--soft); }
+.subh{ font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); margin:22px 0 10px; }
+.sector.general{ background:transparent; border-style:dashed; justify-content:center; }
+.packets .sector.general{ display:flex; flex-direction:column; justify-content:center; gap:12px; }
+details.full summary::before{ content:"+"; display:inline-flex; width:20px; font-size:18px; color:var(--gold); }
+details.full[open] summary::before{ content:"-"; }
+details.full summary::-webkit-details-marker{ display:none; }
+@media (max-width:520px){ .snap{ grid-template-columns:1fr 1fr; } .snap div{ padding:12px; } .snap dd{ font-size:14px; } }
+.packets .sector.general .dl{ justify-content:center; margin-top:0; }
+.packets .sector.general .btn{ width:100%; justify-content:center; }
 </style>
 </head>
 <body>
@@ -158,7 +179,15 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
     <img src="deb.jpg" width="76" height="76" alt="Deborah M. Burke-Allen, RPh">
     <div><div class="eyebrow">Recruiter Kit</div><h1>Deborah M. <span style="white-space:nowrap">Burke-Allen</span>, RPh</h1></div>
   </div>
-  <p class="lead">Everything you need to submit me for a role: a quick snapshot, a summary you can paste into your system, and a Candidate Packet (resume plus Job Alignment Document) for each sector I work in. Each Job Alignment Document maps typical role requirements to my direct evidence.</p>
+  <p class="lead">Everything you need to submit me for a role: pick the sector that matches your opening, send the Candidate Packet to the hiring manager, and upload the resume-only file to your applicant tracking system.</p>
+  <div class="actions">
+    <a class="btn solid" href="mailto:bridgestowellness@icloud.com?subject=Opportunity%20for%20Deborah%20Burke-Allen">Email Deborah</a>
+    <a class="btn line" href="Deborah-Burke-Allen-Resume.pdf" target="_blank" rel="noopener">General resume <span class="fmt">PDF</span></a>
+    <a class="btn line" href="https://www.linkedin.com/in/integrativepediatricpharmacist/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <p class="updated">Updated October 2026</p>
+  <nav class="jump" aria-label="On this page"><a href="#packets">Resumes by sector</a><a href="#summary">Summary</a><a href="#skills">Skills</a><a href="#work-samples">Work samples</a><a href="#speaking">Speaking</a><a href="#contact">Contact</a></nav>
+
 
   <h2>Candidate snapshot</h2>
   <dl class="snap">
@@ -170,45 +199,8 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
     <div><dt>Most recent</dt><dd>Infinite Health PLLC<small>Integrative Pharmacist, 2015 to May 2026</small></dd></div>
   </dl>
 
-  <h2>Copy-ready summary</h2>
-  <div class="blurb">
-    <p id="sum">Deborah M. Burke-Allen, RPh, is a registered pharmacist (NC #14013, issued under Deborah M. Allen) with 25+ years in healthcare. Her expertise is the interconnected body: how the gut, immune, nervous, endocrine, and metabolic systems influence one another, and how medications, nutrition, and supplements act across them. For a decade at an integrative medical practice, she built the clinical systems, reviewed complex medication and supplement regimens, interpreted functional and conventional labs, and mentored MDs, DOs, and NPs. She also led development and scaling of the practice's private-label supplement line: 25 formulations, about $360,000 a year. Earlier, she spent 15 years in high-volume pharmacy practice at Target. She opened a new store's pharmacy as its Pharmacy Manager, later served as pharmacist in charge on shifts without the manager, taught a continuing-education program across the Carolinas, and resolved prior authorizations and Medicaid claims. She led the practice's move from HelloHealth to Elation EHR, including clinical templates and outside lab-data integration, and set up Hint Health for membership billing and a product catalog with point-of-use guidance. She directs Claude Code to build applications and dashboards and verifies every AI-assisted claim against primary sources. Based in Charlotte, NC; open to remote or hybrid roles; full-time preferred.</p>
-    <div class="row"><button class="copy" id="copysum" type="button" aria-label="Copy summary"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="cl">Copy summary</span></button></div>
-  </div>
-
-  <h2 id="skills">Skills, with proof</h2>
-  <div class="skills sectors">
-    <article class="sector">
-      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Clinical Evidence and Knowledge</h3>
-      <ul><li><b>Evidence grading:</b> every claim rated established, plausible, or speculative, and traced to a verified primary source.</li><li><b>Literature synthesis</b> in PubMed and UpToDate for complex cases, presented as cited, staged plans.</li><li><b>Lab integration:</b> functional and conventional labs read together as one connected picture.</li><li><b>Medication expertise:</b> interactions, appropriateness, and drug-nutrient effects across 25+ years.</li></ul>
-    </article>
-    <article class="sector">
-      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Clinical Content and Education</h3>
-      <ul><li>Built the practice's public-, practitioner-, and patient-facing education, protocol guides, and decision-support resources.</li><li>Led three twice-monthly mentorship cohorts for MDs, DOs, and NPs, and weekly family roundtables.</li><li>Turned recurring questions into standardized onboarding; at Transformation Enzyme, turned recurring clinician knowledge gaps into national training.</li></ul>
-    </article>
-    <article class="sector">
-      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Healthcare Technology and Platforms</h3>
-      <ul><li><b>Led the EHR migration</b> from HelloHealth to Elation: selection, setup, pilot run, team training, and clinical templates.</li><li><b>Requirements and integration:</b> liaison to Elation's technical team; coordinated outside lab and clinical data into the record.</li><li><b>Hint Health:</b> early adopter; set up membership billing and supplement credits, and built the product catalog with storage and handling guidance at the point of use.</li><li>Weighed every automation against real workflows, pairing it with user education when needed.</li></ul>
-    </article>
-    <article class="sector">
-      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Supplement Product, Quality, and Claims</h3>
-      <ul><li><b>Led a private-label line</b> of 25 formulations, about $360,000 a year, from formulation and sourcing to Supplement Facts and DSHEA structure/function claims.</li><li>Reviewed batch Certificates of Analysis and kept lot records with storage and expiration requirements.</li><li>Governed the portfolio by evidence, including recommending against a switch the evidence did not support.</li><li>An evidence-based escalation led a manufacturer to restore a more effective formula.</li></ul>
-    </article>
-    <article class="sector">
-      <h3 style="margin:0;font-size:16.5px;line-height:1.3">AI-Directed Building</h3>
-      <ul><li>Directs Claude Code to build applications and dashboards from written specifications.</li><li>Built reusable AI quality checks with explicit pass and fail criteria, and a pipeline that generates tailored documents from one structured source.</li><li>Built and launched this site through AI-directed development.</li><li>Uses Claude, ChatGPT, and Perplexity for deep research, verifying every citation against the primary paper.</li></ul>
-    </article>
-    <article class="sector">
-      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Leadership and Operations</h3>
-      <ul><li>Opened the Stonecrest Target pharmacy as Pharmacy Manager and led its Y2K readiness.</li><li>Pharmacist in charge of technicians, workflow, staffing, and inventory on manager-off shifts in a high-volume pharmacy.</li><li>Certified to teach patient-counseling best practices; taught a 6-hour CE program across Carolinas districts.</li><li>Resolved prior authorizations and Medicaid claim rejections with prescribers.</li></ul>
-    </article>
-  </div>
-  <div class="chips" style="margin-top:16px">
-    <span class="k">Platforms and tools</span>
-    <span>UpToDate</span><span>Lexidrug</span><span>Natural Medicines</span><span>Clinical Pharmacology</span><span>PubMed</span><span>Cochrane</span><span>Zotero</span><span>Elation EHR</span><span>Hint Health</span><span>Shopify</span><span>Salesforce</span><span>Claude and Claude Code</span><span>ChatGPT</span><span>Perplexity</span><span>Gemini</span><span>Copilot</span><span>GitHub Pages</span><span>Microsoft Office</span><span>Google Workspace</span><span>Canva</span>
-  </div>
-
-  <h2>Candidate Packets by sector</h2>
+  <h2 id="packets">Resumes by sector</h2>
+  <p class="help">Each Candidate Packet is a resume plus a Job Alignment Document that maps typical requirements to direct evidence. Not sure which fits? Start with Clinical Content, Medical Affairs, and Health Tech.</p>
   <div class="sectors packets">
     <article class="sector">
       <div class="sh"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 12h8M8 16h5M8 8h4"/></svg><h3>Clinical Content, Medical Affairs, and Health Tech</h3></div>
@@ -260,27 +252,62 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
       </div>
       <div class="samples"><span class="sl">Work samples</span><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Testing.pdf" target="_blank" rel="noopener">The Why Behind Testing</a></div>
     </article>
+    <article class="sector general">
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Not sure which sector?</h3>
+      <p>The general resume covers every area at a glance.</p>
+      <div class="dl"><a class="btn line wide-btn" href="Deborah-Burke-Allen-Resume.pdf" target="_blank" rel="noopener">General resume <span class="fmt">PDF, 2 PAGES</span></a></div>
+    </article>
   </div>
   <p class="note">Each Candidate Packet is the resume followed by the Job Alignment Document, with bookmarks for each. For an applicant tracking system, please upload the <b>Resume only</b> file. Every resume is tested for ATS: plain text, standard headings, and the name on the first line.</p>
 
-  <h2 id="speaking">Speaking</h2>
-  <div class="sectors">
+  <h2 id="summary">Copy-ready summary</h2>
+  <div class="blurb">
+    <p id="sum">Deborah M. Burke-Allen, RPh (NC #14013, issued under Deborah M. Allen), is a registered pharmacist with 25+ years in healthcare. For a decade at an integrative medical practice, she built the clinical education and systems, led a private-label supplement line of 25 formulations (about $360,000 a year), and led the practice's move to Elation EHR. Earlier, she spent 15 years in high-volume pharmacy practice at Target. Based in Charlotte, NC; remote or hybrid; full-time preferred.</p>
+    <div class="row"><button class="copy" id="copysum" type="button" aria-label="Copy short summary"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="cl">Copy short summary</span></button></div>
+    <details class="full"><summary>Show the full summary (about 230 words)</summary>
+      <p id="sumfull">Deborah M. Burke-Allen, RPh, is a registered pharmacist (NC #14013, issued under Deborah M. Allen) with 25+ years in healthcare. Her expertise is the interconnected body: how the gut, immune, nervous, endocrine, and metabolic systems influence one another, and how medications, nutrition, and supplements act across them. For a decade at an integrative medical practice, she built the clinical systems, reviewed complex medication and supplement regimens, interpreted functional and conventional labs, and mentored MDs, DOs, and NPs. She also led development and scaling of the practice's private-label supplement line: 25 formulations, about $360,000 a year. Earlier, she spent 15 years in high-volume pharmacy practice at Target. She opened a new store's pharmacy as its Pharmacy Manager, later served as pharmacist in charge on shifts without the manager, taught a continuing-education program across the Carolinas, and resolved prior authorizations and Medicaid claims. She led the practice's move from HelloHealth to Elation EHR, including clinical templates and outside lab-data integration, and set up Hint Health for membership billing and a product catalog with point-of-use guidance. She directs Claude Code to build applications and dashboards and verifies every AI-assisted claim against primary sources. Based in Charlotte, NC; open to remote or hybrid roles; full-time preferred.</p>
+      <div class="row"><button class="copy" id="copyfull" type="button" aria-label="Copy full summary"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="cl">Copy full summary</span></button></div>
+    </details>
+  </div>
+
+
+
+  <h2 id="skills">Skills, with proof</h2>
+  <div class="skills sectors">
     <article class="sector">
-      <div class="eyebrow">Signature topic</div>
-      <h3 style="margin:0;font-size:16.5px;line-height:1.3">The Interconnected Body</h3>
-      <p>How the gut, immune, nervous, endocrine, and metabolic systems influence one another, and how nutrition, medications, and supplements act across them all.</p>
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Clinical Evidence and Knowledge</h3>
+      <ul><li><b>Evidence grading:</b> every claim rated established, plausible, or speculative, and traced to a verified primary source.</li><li><b>Literature synthesis</b> in PubMed and UpToDate for complex cases, presented as cited, staged plans.</li><li><b>Lab integration:</b> functional and conventional labs read together as one connected picture.</li><li><b>Medication expertise:</b> interactions, appropriateness, and drug-nutrient effects across 25+ years.</li></ul>
     </article>
     <article class="sector">
-      <div class="eyebrow">Signature topic</div>
-      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Pediatric Immune Resilience</h3>
-      <p>Healthy cell, healthy gut, healthy child: immune-resilience science in practice. Presented for the Personalized Lifestyle Medicine Institute and the U.S. Department of Veterans Affairs.</p>
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Clinical Content and Education</h3>
+      <ul><li>Built the practice's public-, practitioner-, and patient-facing education, protocol guides, and decision-support resources.</li><li>Led three twice-monthly mentorship cohorts for MDs, DOs, and NPs, and weekly family roundtables.</li><li>Turned recurring questions into standardized onboarding; at Transformation Enzyme, turned recurring clinician knowledge gaps into national training.</li></ul>
+    </article>
+    <article class="sector">
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Healthcare Technology and Platforms</h3>
+      <ul><li><b>Led the EHR migration</b> from HelloHealth to Elation: selection, setup, pilot run, team training, and clinical templates.</li><li><b>Requirements and integration:</b> liaison to Elation's technical team; coordinated outside lab and clinical data into the record.</li><li><b>Hint Health:</b> early adopter; set up membership billing and supplement credits, and built the product catalog with storage and handling guidance at the point of use.</li><li>Weighed every automation against real workflows, pairing it with user education when needed.</li></ul>
+    </article>
+    <article class="sector">
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Supplement Product, Quality, and Claims</h3>
+      <ul><li><b>Led a private-label line</b> of 25 formulations, about $360,000 a year, from formulation and sourcing to Supplement Facts and DSHEA structure/function claims.</li><li>Reviewed batch Certificates of Analysis and kept lot records with storage and expiration requirements.</li><li>Governed the portfolio by evidence, including recommending against a switch the evidence did not support.</li><li>An evidence-based escalation led a manufacturer to restore a more effective formula.</li></ul>
+    </article>
+    <article class="sector">
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">AI-Directed Building</h3>
+      <ul><li>Directs Claude Code to build applications and dashboards from written specifications.</li><li>Built reusable AI quality checks with explicit pass and fail criteria, and a pipeline that generates tailored documents from one structured source.</li><li>Built and launched this site through AI-directed development.</li><li>Uses Claude, ChatGPT, and Perplexity for deep research, verifying every citation against the primary paper.</li></ul>
+    </article>
+    <article class="sector">
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Leadership and Operations</h3>
+      <ul><li>Opened the Stonecrest Target pharmacy as Pharmacy Manager and led its Y2K readiness.</li><li>Pharmacist in charge of technicians, workflow, staffing, and inventory on manager-off shifts in a high-volume pharmacy.</li><li>Certified to teach patient-counseling best practices; taught a 6-hour CE program across Carolinas districts.</li><li>Resolved prior authorizations and Medicaid claim rejections with prescribers.</li></ul>
     </article>
   </div>
-  <p class="note">Also presented at the AHEC Gerontology Conference, the Transformation Enzyme Therapy Conference, and the Evolution of Medicine Functional Forum. Available for conference, webinar, and clinician-education engagements.</p>
+  <div class="chips" style="margin-top:16px">
+    <span class="k">Platforms and tools</span>
+    <span>UpToDate</span><span>Lexidrug</span><span>Natural Medicines</span><span>Clinical Pharmacology</span><span>PubMed</span><span>Cochrane</span><span>Zotero</span><span>Elation EHR</span><span>Hint Health</span><span>Shopify</span><span>Salesforce</span><span>Claude and Claude Code</span><span>ChatGPT</span><span>Perplexity</span><span>Gemini</span><span>Copilot</span><span>GitHub Pages</span><span>Microsoft Office</span><span>Google Workspace</span><span>Canva</span>
+  </div>
 
   <h2 id="work-samples">Work samples</h2>
   <p class="lead" style="margin-top:0">Parent-education roundtables I designed, researched, and presented, plus claims reviews and evidence explainers. Every clinical claim is cited and verified in PubMed.</p>
-  <div class="sectors" style="margin-top:16px">
+  <div class="subh">Education decks</div>
+  <div class="sectors">
     <article class="sector">
       <h3 style="margin:0;font-size:16.5px;line-height:1.3">Histamine, Sleep, and the Nervous System</h3>
       <p>Mechanism-level pharmacology translated for parents: receptors, sleep, clearance, and safety.</p>
@@ -313,6 +340,9 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
         <div class="singles"><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Supplements.pdf" target="_blank" rel="noopener">Full deck, 9 slides</a></div>
       </div>
     </article>
+  </div>
+  <div class="subh">Claims and evidence reviews</div>
+  <div class="sectors">
     <article class="sector">
       <h3 style="margin:0;font-size:16.5px;line-height:1.3">Claims Review: Omega-3 Fish Oil</h3>
       <p>A product sheet held to DSHEA structure/function limits: each claim kept, rewritten, or removed, with PubMed-verified reasons.</p>
@@ -336,13 +366,22 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
     </article>
   </div>
 
-  <h2>More</h2>
-  <div class="more">
-    <a class="btn line" href="Deborah-Burke-Allen-Resume.pdf" target="_blank" rel="noopener">General resume <span class="fmt">PDF</span></a>
-        <a class="btn line" href="https://www.linkedin.com/in/integrativepediatricpharmacist/" target="_blank" rel="noopener">LinkedIn</a>
+  <h2 id="speaking">Speaking</h2>
+  <div class="sectors">
+    <article class="sector">
+      <div class="eyebrow">Signature topic</div>
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">The Interconnected Body</h3>
+      <p>How the gut, immune, nervous, endocrine, and metabolic systems influence one another, and how nutrition, medications, and supplements act across them all.</p>
+    </article>
+    <article class="sector">
+      <div class="eyebrow">Signature topic</div>
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Pediatric Immune Resilience</h3>
+      <p>Healthy cell, healthy gut, healthy child: immune-resilience science in practice. Presented for the Personalized Lifestyle Medicine Institute and the U.S. Department of Veterans Affairs.</p>
+    </article>
   </div>
+  <p class="note">Also presented at the AHEC Gerontology Conference, the Transformation Enzyme Therapy Conference, and the Evolution of Medicine Functional Forum. Available for conference, webinar, and clinician-education engagements.</p>
 
-  <h2>Contact</h2>
+  <h2 id="contact">Contact</h2>
   <div class="contact">
     <div class="mail">
       <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
@@ -365,6 +404,7 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
   }
   wire("copy",function(){ return "bridgestowellness@icloud.com"; },"Email address","addr");
   wire("copysum",function(){ return document.getElementById("sum").textContent; },"Summary","sum");
+  wire("copyfull",function(){ return document.getElementById("sumfull").textContent; },"Full summary","sumfull");
 })();
 </script>
 </body>
