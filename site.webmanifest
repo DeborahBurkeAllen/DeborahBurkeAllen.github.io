@@ -1,7 +1,11 @@
 {
+ "id": "/",
  "name": "Deborah M. Burke-Allen, RPh",
  "short_name": "Deb Burke-Allen",
+ "description": "Registered pharmacist in Charlotte, NC: resumes, Candidate Packets, skills, and work samples.",
+ "lang": "en-US",
  "start_url": "/",
+ "scope": "/",
  "display": "browser",
  "background_color": "#eef1ec",
  "theme_color": "#1a3150",
