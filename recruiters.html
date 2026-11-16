@@ -30,7 +30,7 @@
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"WebPage","@id":"https://deborahburkeallen.github.io/recruiters.html#page","url":"https://deborahburkeallen.github.io/recruiters.html","name":"Recruiter Kit | Deborah M. Burke-Allen, RPh","description":"Sector resumes, Candidate Packets, skills with proof, and evidence-verified work samples.","inLanguage":"en-US","dateModified":"2026-11-05","about":{"@id":"https://deborahburkeallen.github.io/#person"},"isPartOf":{"@type":"WebSite","@id":"https://deborahburkeallen.github.io/#site","url":"https://deborahburkeallen.github.io/","name":"Deborah M. Burke-Allen, RPh"},"breadcrumb":{"@id":"https://deborahburkeallen.github.io/recruiters.html#breadcrumb"}},
+{"@type":"WebPage","@id":"https://deborahburkeallen.github.io/recruiters.html#page","url":"https://deborahburkeallen.github.io/recruiters.html","name":"Recruiter Kit | Deborah M. Burke-Allen, RPh","description":"Sector resumes, Candidate Packets, skills with proof, and evidence-verified work samples.","inLanguage":"en-US","dateModified":"2026-11-16","about":{"@id":"https://deborahburkeallen.github.io/#person"},"isPartOf":{"@type":"WebSite","@id":"https://deborahburkeallen.github.io/#site","url":"https://deborahburkeallen.github.io/","name":"Deborah M. Burke-Allen, RPh"},"breadcrumb":{"@id":"https://deborahburkeallen.github.io/recruiters.html#breadcrumb"}},
 {"@type":"BreadcrumbList","@id":"https://deborahburkeallen.github.io/recruiters.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://deborahburkeallen.github.io/"},{"@type":"ListItem","position":2,"name":"Recruiter Kit","item":"https://deborahburkeallen.github.io/recruiters.html"}]},
 {"@type":"Person","@id":"https://deborahburkeallen.github.io/#person","name":"Deborah M. Burke-Allen","honorificSuffix":"RPh","jobTitle":"Registered Pharmacist","url":"https://deborahburkeallen.github.io/","image":"https://deborahburkeallen.github.io/deb.jpg","address":{"@type":"PostalAddress","addressLocality":"Charlotte","addressRegion":"NC","addressCountry":"US"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Albany College of Pharmacy and Health Sciences"},"sameAs":["https://www.linkedin.com/in/integrativepediatricpharmacist/","https://github.com/DeborahBurkeAllen"]}
 ]}
@@ -141,7 +141,7 @@ h2{ scroll-margin-top:16px; font-family:"Newsreader",Georgia,serif; font-weight:
 @supports (grid-template-rows: subgrid){ .packets .sector{ display:grid; grid-template-rows:subgrid; grid-row:span 5; gap:10px; } .packets .dl{ margin-top:0; padding-top:4px; align-self:end; } .packets .samples{ margin-top:0; align-self:start; } }
 .btn{ white-space:nowrap; }
 @media (max-width:360px){ .wide-btn .fmt{ display:none; } }
-.singles{ width:100%; display:flex; justify-content:center; gap:10px; font-size:13px; color:var(--soft); }
+.singles{ width:100%; display:flex; justify-content:center; align-items:baseline; gap:10px; font-size:13px; color:var(--soft); }
 .singles a{ color:var(--ink); font-weight:500; text-underline-offset:3px; padding:6px 2px; }
 .singles a:hover{ color:var(--btn-hover); }
 .singles a:focus-visible{ outline:3px solid var(--focus); outline-offset:2px; border-radius:4px; }
@@ -194,6 +194,34 @@ details.full summary::-webkit-details-marker{ display:none; }
 .nw{ white-space:nowrap; }
 .sector h3,.sh h3{ text-wrap:balance; }
 .snap dd,.snap dd small{ text-wrap:balance; }
+.pos{ color:var(--ink); font-size:17px; font-weight:500; line-height:1.5; margin:18px 0 0; max-width:62ch; text-wrap:pretty; }
+.sector[id]{ scroll-margin-top:72px; }
+.pick{ margin-top:14px; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px 18px 4px; }
+.pick h2{ font-family:inherit; font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); margin:0 0 2px; }
+.picklist{ list-style:none; margin:0; padding:0; }
+.picklist li{ display:flex; align-items:center; gap:12px; padding:10px 0; border-top:1px solid var(--line); }
+.picklist li:first-child{ border-top:0; }
+.picklist .pn{ flex:1; min-width:0; font-weight:600; font-size:15px; line-height:1.3; color:var(--ink); text-decoration:none; text-wrap:balance; }
+.picklist .pn:hover{ text-decoration:underline; text-underline-offset:3px; }
+.picklist .pn:focus-visible{ outline:3px solid var(--focus); outline-offset:2px; border-radius:4px; }
+.picklist .pb{ flex:none; display:flex; gap:8px; }
+.picklist .btn{ min-width:78px; padding:0 12px; justify-content:center; }
+.picklist .pg{ display:block; font-size:14px; line-height:1.5; color:var(--soft); text-wrap:pretty; }
+.picklist .pg a{ color:var(--ink); font-weight:600; text-underline-offset:3px; }
+.proof{ list-style:none; margin:28px 0 0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.proof li{ background:var(--card); padding:14px 16px; display:flex; flex-direction:column; gap:4px; }
+.proof .num{ font-family:"Newsreader",Georgia,"Times New Roman",serif; font-weight:600; font-size:26px; line-height:1.1; color:var(--ink); }
+.proof .pl{ font-size:13px; line-height:1.45; color:var(--soft); text-wrap:pretty; }
+@media (min-width:640px){ .proof{ grid-template-columns:repeat(4,1fr); } }
+.thumb{ display:block; border-radius:10px; }
+.thumb img{ display:block; width:100%; height:auto; border-radius:10px; border:1px solid var(--line); background:var(--ground); }
+.thumb.doc img{ aspect-ratio:4 / 3; object-fit:cover; object-position:top center; }
+.thumb:focus-visible{ outline:3px solid var(--focus); outline-offset:3px; }
+.skills details.full{ margin-top:0; }
+.skills details.full ul{ margin-top:8px; }
+@media (max-width:440px){ .actions{ display:grid; grid-template-columns:1fr 1fr; } .actions .btn{ justify-content:center; padding:0 10px; } .actions .btn.solid{ grid-column:1 / -1; } }
+@media (max-width:359px){ .actions .fmt{ display:none; } .picklist .btn{ min-width:0; padding:0 10px; } }
+@media (max-width:640px){ .jump{ -webkit-mask-image:linear-gradient(90deg,#000 82%,transparent); mask-image:linear-gradient(90deg,#000 82%,transparent); scroll-snap-type:x proximity; scroll-padding-inline:16px; padding-right:40px; } .jump a{ scroll-snap-align:start; } }
 </style>
 </head>
 <body>
@@ -204,15 +232,33 @@ details.full summary::-webkit-details-marker{ display:none; }
     <img src="deb.jpg" width="76" height="76" alt="">
     <div><div class="eyebrow">Recruiter Kit</div><h1>Deborah M. <span style="white-space:nowrap">Burke-Allen</span>, RPh</h1></div>
   </div>
-  <p class="lead">To submit me, choose the sector that fits your opening, send its Candidate Packet to the hiring manager, and upload the <span class="nw">resume-only</span> file to your applicant tracking system.</p>
+  <p class="pos">I am a registered pharmacist whose work spans supplement science and claims review, clinical education, evidence review, and clinical AI.</p>
   <div class="actions">
     <a class="btn solid" href="mailto:bridgestowellness@icloud.com?subject=Opportunity%20for%20Deborah%20Burke-Allen">Email Deborah</a>
     <a class="btn line" href="Deborah-Burke-Allen-Resume.pdf" target="_blank" rel="noopener">General resume <span class="fmt">PDF</span></a>
     <a class="btn line" href="https://www.linkedin.com/in/integrativepediatricpharmacist/" target="_blank" rel="noopener">LinkedIn</a>
   </div>
+  <p class="lead">Choose the sector that matches your opening. Send its Candidate Packet to the hiring manager and upload its resume to your applicant tracking system.</p>
+  <section class="pick" aria-labelledby="pick-h">
+    <h2 id="pick-h">Quick pick: resumes by role</h2>
+    <ul class="picklist">
+      <li><a class="pn" href="#supplements">Supplements, Nutrition, and Diagnostics</a><span class="pb"><a class="btn solid" href="Deborah-M-Burke-Allen-Candidate-Packet-Supplements-Nutrition-Diagnostics.pdf" target="_blank" rel="noopener" aria-label="Supplements, Nutrition, and Diagnostics Candidate Packet, PDF">Packet</a><a class="btn line" href="Deborah-M-Burke-Allen-Resume-Supplements-Nutrition-Diagnostics.pdf" target="_blank" rel="noopener" aria-label="Supplements, Nutrition, and Diagnostics resume, PDF">Resume</a></span></li>
+      <li><a class="pn" href="#clinical-content">Clinical Content and Health Tech</a><span class="pb"><a class="btn solid" href="Deborah-M-Burke-Allen-Candidate-Packet-Clinical-Content-Health-Tech.pdf" target="_blank" rel="noopener" aria-label="Clinical Content and Health Tech Candidate Packet, PDF">Packet</a><a class="btn line" href="Deborah-M-Burke-Allen-Resume-Clinical-Content-Health-Tech.pdf" target="_blank" rel="noopener" aria-label="Clinical Content and Health Tech resume, PDF">Resume</a></span></li>
+      <li><a class="pn" href="#pharmacy">Clinical and Dispensing Pharmacy</a><span class="pb"><a class="btn solid" href="Deborah-M-Burke-Allen-Candidate-Packet-Clinical-Pharmacy.pdf" target="_blank" rel="noopener" aria-label="Clinical and Dispensing Pharmacy Candidate Packet, PDF">Packet</a><a class="btn line" href="Deborah-M-Burke-Allen-Resume-Clinical-Pharmacy.pdf" target="_blank" rel="noopener" aria-label="Clinical and Dispensing Pharmacy resume, PDF">Resume</a></span></li>
+      <li><a class="pn" href="#managed-care">Managed Care and Pharmacy Benefits</a><span class="pb"><a class="btn solid" href="Deborah-M-Burke-Allen-Candidate-Packet-Managed-Care-Pharmacy-Benefits.pdf" target="_blank" rel="noopener" aria-label="Managed Care and Pharmacy Benefits Candidate Packet, PDF">Packet</a><a class="btn line" href="Deborah-M-Burke-Allen-Resume-Managed-Care-Pharmacy-Benefits.pdf" target="_blank" rel="noopener" aria-label="Managed Care and Pharmacy Benefits resume, PDF">Resume</a></span></li>
+      <li><a class="pn" href="#clinical-ai">Clinical AI and Pharmacy Informatics</a><span class="pb"><a class="btn solid" href="Deborah-M-Burke-Allen-Candidate-Packet-Clinical-AI-Informatics.pdf" target="_blank" rel="noopener" aria-label="Clinical AI and Pharmacy Informatics Candidate Packet, PDF">Packet</a><a class="btn line" href="Deborah-M-Burke-Allen-Resume-Clinical-AI-Informatics.pdf" target="_blank" rel="noopener" aria-label="Clinical AI and Pharmacy Informatics resume, PDF">Resume</a></span></li>
+      <li class="pg">Does the role span several areas? Use the <a href="Deborah-Burke-Allen-Resume.pdf" target="_blank" rel="noopener">general resume</a>.</li>
+    </ul>
+  </section>
   <p class="updated">Updated November 2026</p>
-  <nav class="jump" aria-label="On this page"><a href="#packets">Resumes by sector</a><a href="#summary">Summary</a><a href="#skills">Skills</a><a href="#work-samples">Work samples</a><a href="#speaking">Speaking</a><a href="#contact">Contact</a></nav>
+  <nav class="jump" aria-label="On this page"><a href="#packets">Resumes</a><a href="#summary">Summary</a><a href="#skills">Skills</a><a href="#work-samples">Work samples</a><a href="#speaking">Speaking</a><a href="#contact">Contact</a></nav>
 
+  <ul class="proof" aria-label="Career highlights">
+    <li><span class="num">25+</span><span class="pl">years in pharmacy and healthcare</span></li>
+    <li><span class="num">$360K</span><span class="pl">approximate yearly revenue of the <span class="nw">25-formulation</span> <span class="nw">private-label</span> line I led</span></li>
+    <li><span class="num">3</span><span class="pl"><span class="nw">twice-monthly</span> mentorship cohorts for MDs, DOs, and NPs</span></li>
+    <li><span class="num">15</span><span class="pl">years of <span class="nw">high-volume</span>, regulated pharmacy practice</span></li>
+  </ul>
 
   <h2>Candidate snapshot</h2>
   <dl class="snap">
@@ -221,13 +267,13 @@ details.full summary::-webkit-details-marker{ display:none; }
     <div><dt>Education</dt><dd>BS in Pharmacy<small>Albany College of Pharmacy and Health Sciences</small></dd></div>
     <div><dt>Location</dt><dd>Charlotte, NC<small>Remote or hybrid</small></dd></div>
     <div><dt>Employment</dt><dd><span class="nw">Full-time</span> preferred<small>Open to <span class="nw">contract-to-hire</span></small></dd></div>
-    <div><dt>Most recent</dt><dd>Infinite Health PLLC<small>Integrative Pharmacist, 2015 to May 2026</small></dd></div>
+    <div><dt>Most recent</dt><dd>Infinite Health PLLC<small>Integrative Pharmacist, Apr 2015 to May 2026</small></dd></div>
   </dl>
 
   <h2 id="packets">Resumes by sector</h2>
-  <p class="help">Each Candidate Packet pairs a resume with a Job Alignment Document that maps typical requirements to direct evidence. For supplement, claims, or regulatory roles, start with Supplements, Nutrition, and Diagnostics.</p>
+  <p class="help">Each Candidate Packet pairs a resume with a Job Alignment Document that maps typical requirements to direct evidence. For supplement, <span class="nw">claims-review</span>, labeling, or <span class="nw">regulatory-support</span> roles, start with Supplements, Nutrition, and Diagnostics.</p>
   <div class="sectors packets">
-    <article class="sector">
+    <article class="sector" id="supplements">
       <div class="sh"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 14h9"/></svg><h3>Supplements, Nutrition, and Diagnostics</h3></div>
       <p>Supplement, nutrition, longevity, and diagnostics companies: claims and label review, scientific content, product, and practitioner education roles.</p>
       <div class="tags"><span>Claims and Labeling</span><span>Scientific Content</span><span>Practitioner Education</span><span>Lab Integration</span></div>
@@ -237,7 +283,7 @@ details.full summary::-webkit-details-marker{ display:none; }
       </div>
       <div class="samples"><span class="sl">Work samples</span><a href="Deborah-M-Burke-Allen-Claims-Review-Probiotic-Strain.pdf" target="_blank" rel="noopener">Probiotic Claims Review</a><a href="Deborah-M-Burke-Allen-Claims-Review-Omega-3-Fish-Oil.pdf" target="_blank" rel="noopener"><span class="nw">Omega-3</span> Claims Review</a><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Supplements.pdf" target="_blank" rel="noopener">Why Behind Supplements</a><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Testing.pdf" target="_blank" rel="noopener">Why Behind Testing</a><a href="Deborah-M-Burke-Allen-Work-Sample-Science-Behind-Inflammatory-Foods.pdf" target="_blank" rel="noopener">Inflammatory Foods</a></div>
     </article>
-    <article class="sector">
+    <article class="sector" id="clinical-content">
       <div class="sh"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h12l4 4v12H4z"/><path d="M8 12h8M8 16h5M8 8h4"/></svg><h3>Clinical Content, Medical Affairs, and Health Tech</h3></div>
       <p>Clinical content, medical writing, medical affairs, clinical AI, and health technology roles.</p>
       <div class="tags"><span>Evidence Review</span><span>Clinical Writing</span><span>Patient Education</span><span>Clinical AI</span></div>
@@ -247,7 +293,7 @@ details.full summary::-webkit-details-marker{ display:none; }
       </div>
       <div class="samples"><span class="sl">Work samples</span><a href="Deborah-M-Burke-Allen-Work-Sample-Histamine-Sleep-Nervous-System.pdf" target="_blank" rel="noopener">Histamine and Sleep</a><a href="Deborah-M-Burke-Allen-Work-Sample-Science-Behind-Inflammatory-Foods.pdf" target="_blank" rel="noopener">Inflammatory Foods</a><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Testing.pdf" target="_blank" rel="noopener">Why Behind Testing</a><a href="Deborah-M-Burke-Allen-Omega-3-Explainer-and-Claim-Red-Flags.pdf" target="_blank" rel="noopener"><span class="nw">Omega-3</span> Explainer</a></div>
     </article>
-    <article class="sector">
+    <article class="sector" id="pharmacy">
       <div class="sh"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 3.5a5 5 0 0 1 7 7l-7 7a5 5 0 0 1-7-7z"/><path d="m7 10 7 7"/></svg><h3>Clinical and Dispensing Pharmacy</h3></div>
       <p>Clinical, dispensing, and pharmacy leadership roles: <span class="nw">long-term</span> care, retail, outpatient, and specialty pharmacy.</p>
       <div class="tags"><span>Pharmacist in Charge</span><span>Medication Safety</span><span>Patient Counseling</span><span>Retail Pharmacy</span></div>
@@ -257,7 +303,7 @@ details.full summary::-webkit-details-marker{ display:none; }
       </div>
       <div class="samples"><span class="sl">Work samples</span><a href="Deborah-M-Burke-Allen-Work-Sample-Histamine-Sleep-Nervous-System.pdf" target="_blank" rel="noopener">Histamine and Sleep</a><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Supplements.pdf" target="_blank" rel="noopener">Why Behind Supplements</a></div>
     </article>
-    <article class="sector">
+    <article class="sector" id="managed-care">
       <div class="sh"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.2 8 9 4.6-.8 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><h3>Managed Care and Pharmacy Benefits</h3></div>
       <p>Prior authorization, PBM, health plan, Medicaid, and pharmacy benefit consulting roles.</p>
       <div class="tags"><span>Coverage Barriers</span><span>Lab Authorizations</span><span>Prescriber Communication</span><span>Medication Review</span></div>
@@ -267,7 +313,7 @@ details.full summary::-webkit-details-marker{ display:none; }
       </div>
       <div class="samples"><span class="sl">Key experience</span><span class="kx"><span class="nw">Pharmacy-side</span> prior authorizations</span><span class="kx">Medicaid claim rejections</span><span class="kx">Formulary alternatives</span></div>
     </article>
-    <article class="sector">
+    <article class="sector" id="clinical-ai">
       <div class="sh"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6v6H9zM9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg><h3>Clinical AI and Pharmacy Informatics</h3></div>
       <p>Clinical AI, AI training and evaluation, prompt engineering, and pharmacy informatics roles.</p>
       <div class="tags"><span>AI Prompting</span><span>AI Evaluation</span><span>EHR Implementation</span><span>Clinical AI</span></div>
@@ -288,10 +334,10 @@ details.full summary::-webkit-details-marker{ display:none; }
 
   <h2 id="summary"><span class="nw">Copy-ready</span> summary</h2>
   <div class="blurb">
-    <p id="sum">Deborah M. <span class="nw">Burke-Allen</span>, RPh (NC #14013, issued under Deborah M. Allen), is a registered pharmacist with 25+ years in pharmacy and healthcare. For a decade at an integrative medical practice, she built the clinical education and systems and directed the move to Elation EHR. She also led development and scaling of the practice's <span class="nw">private-label</span> supplement line: 25 formulations, about $360,000 a year, from formula selection to final label approval. Earlier, she spent 15 years in <span class="nw">high-volume</span> pharmacy practice at Target. She is based in Charlotte, NC, and is seeking a <span class="nw">full-time</span> remote or hybrid role.</p>
+    <p id="sum">Deborah M. <span class="nw">Burke-Allen</span>, RPh (NC #14013, issued under Deborah M. Allen), is a registered pharmacist with 25+ years in pharmacy and healthcare. For a decade at an integrative medical practice, she built the clinical education and systems and led the migration to Elation EHR. She also led development and scaling of the practice's <span class="nw">private-label</span> supplement line: 25 formulations, about $360,000 a year, from formula selection and sourcing to final label approval. Earlier, she spent 15 years in <span class="nw">high-volume</span> pharmacy practice at Target. She is based in Charlotte, NC, and is seeking a <span class="nw">full-time</span> remote or hybrid role.</p>
     <div class="row"><button class="copy" id="copysum" type="button" aria-label="Copy short summary"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="cl">Copy short summary</span></button></div>
     <details class="full"><summary>Show the full summary (about 260 words)</summary>
-      <p id="sumfull">Deborah M. <span class="nw">Burke-Allen</span>, RPh, is a registered pharmacist (NC #14013, issued under Deborah M. Allen) with 25+ years in pharmacy and healthcare. Her expertise is the interconnected body: how the gut, immune, nervous, endocrine, and metabolic systems influence one another, and how medications, nutrition, and supplements act across them. For a decade at an integrative medical practice, she built the clinical education and systems and mentored MDs, DOs, and NPs. Her clinical work included reviewing complex medication and supplement regimens and integrating functional and conventional labs into one clinical picture. She also led development and scaling of the practice's <span class="nw">private-label</span> supplement line: 25 formulations, about $360,000 a year, from formula selection and sourcing to final label approval. On the platform side, she managed the evaluation and migration from HelloHealth to Elation EHR and championed early adoption of Hint Health for membership billing. At Transformation Enzyme, she delivered national training for healthcare professionals, built education around recurring clinician knowledge gaps, and explained California Proposition 65 to practitioners. Earlier, she spent 15 years in <span class="nw">high-volume</span> pharmacy practice at Target. There, she opened a new store's pharmacy as its Pharmacy Manager, taught a <span class="nw">continuing-education</span> program across the Carolinas, and later served as pharmacist in charge on <span class="nw">manager-off</span> shifts. At Target and at the practice, she resolved prior authorizations and Medicaid claim rejections with prescribers and patients. Today she directs Claude Code to build applications and dashboards and verifies every <span class="nw">AI-assisted</span> claim against primary sources. Based in Charlotte, NC, she is seeking a <span class="nw">full-time</span> remote or hybrid role and is open to <span class="nw">contract-to-hire</span>.</p>
+      <p id="sumfull">Deborah M. <span class="nw">Burke-Allen</span>, RPh, is a registered pharmacist (NC #14013, issued under Deborah M. Allen) with 25+ years in pharmacy and healthcare. Her expertise is the interconnected body: how the gut, immune, nervous, endocrine, and metabolic systems influence one another, and how medications, nutrition, and supplements act across them. For a decade at an integrative medical practice, she built the clinical education and systems and mentored MDs, DOs, and NPs. Her clinical work included reviewing complex medication and supplement regimens and integrating functional and conventional labs into one clinical picture. She also led development and scaling of the practice's <span class="nw">private-label</span> supplement line: 25 formulations, about $360,000 a year, from formula selection and sourcing to final label approval. On the platform side, she led the evaluation and migration from HelloHealth to Elation EHR and championed early adoption of Hint Health for membership billing. At Transformation Enzyme, she delivered national training for healthcare professionals, built education around recurring clinician knowledge gaps, and explained California Proposition 65 to practitioners. Earlier, she spent 15 years in <span class="nw">high-volume</span> pharmacy practice at Target. There, she opened a new store's pharmacy as its Pharmacy Manager, taught a <span class="nw">continuing-education</span> program across the Carolinas, and later served as pharmacist in charge on <span class="nw">manager-off</span> shifts. At Target and at the practice, she resolved prior authorizations and Medicaid claim rejections with prescribers and patients. Today she directs Claude Code to build applications and dashboards and verifies every <span class="nw">AI-assisted</span> claim against primary sources. Based in Charlotte, NC, she is seeking a <span class="nw">full-time</span> remote or hybrid role and is open to <span class="nw">contract-to-hire</span>.</p>
       <div class="row"><button class="copy" id="copyfull" type="button" aria-label="Copy full summary"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="cl">Copy full summary</span></button></div>
     </details>
   </div>
@@ -302,27 +348,45 @@ details.full summary::-webkit-details-marker{ display:none; }
   <div class="skills sectors">
     <article class="sector">
       <h3 style="margin:0;font-size:16.5px;line-height:1.3">Supplement Product, Quality, and Claims</h3>
-      <ul><li><b>Led development and scaling</b> of a <span class="nw">private-label</span> supplement line of 25 formulations, about $360,000 a year, from formula selection and sourcing to Supplement Facts, DSHEA structure/function claims, and final label approval.</li><li>Selected and vetted manufacturers' existing formulations for minimal excipients, absorbability, and purity.</li><li>Worked with 3 manufacturers, reviewed their batch Certificates of Analysis and stability data, and kept lot records with expiration dates.</li><li>Identified and vetted alternate sources, comparing specifications and Certificates of Analysis, during a <span class="nw">six-month</span> backorder of the practice's top probiotic.</li><li>Took adverse event reports from families, reported each to the manufacturer, and checked whether the reaction was common or unusual.</li><li>Governed the portfolio by evidence: recommended against a switch the research did not support and documented a reformulation's likely efficacy loss, prompting the manufacturer to restore the original formula.</li></ul>
+      <ul><li><b>Product leadership:</b> led development and scaling of a <span class="nw">private-label</span> supplement line of 25 formulations, about $360,000 a year, from formula selection and sourcing to Supplement Facts, DSHEA structure/function claims, and final label approval.</li><li><b>COA and lot records:</b> worked with 3 manufacturers, reviewed their batch Certificates of Analysis and stability data, and kept lot records with expiration dates.</li><li><b><span class="nw">Evidence-led</span> portfolio:</b> recommended against a switch the research did not support and documented a reformulation's likely efficacy loss, prompting the manufacturer to restore the original formula.</li></ul>
+      <details class="full"><summary>Show 3 more</summary>
+        <ul><li><b>Formula vetting:</b> selected and vetted manufacturers' existing formulations for minimal excipients, absorbability, and purity.</li><li><b>Supply continuity:</b> identified and vetted alternate sources, comparing specifications and Certificates of Analysis, during a <span class="nw">six-month</span> backorder of the practice's top probiotic.</li><li><b>Adverse event intake:</b> took adverse event reports from families, reported each to the manufacturer, and checked whether the reaction was common or unusual.</li></ul>
+      </details>
     </article>
     <article class="sector">
       <h3 style="margin:0;font-size:16.5px;line-height:1.3">Clinical Evidence and Knowledge</h3>
-      <ul><li><b>Evidence grading:</b> every claim rated established, plausible, or speculative, and traced to a verified primary source.</li><li><b>Literature synthesis:</b> researched complex cases in PubMed, with UpToDate for clinical context; for a <span class="nw">co-managed</span> pediatric case, presented staged plans with full citations to the physician and family.</li><li><b>Lab integration and translation:</b> <span class="nw">GI-MAP</span>, Doctor's Data, and Genova stool analyses, organic acids, and conventional labs read against optimal ranges as one clinical picture.</li><li><b>Medication expertise:</b> prescription review for safety, interactions, and appropriateness, plus <span class="nw">drug-nutrient</span> and <span class="nw">drug-supplement</span> interactions.</li><li><b>Nutrigenomics:</b> trained in genetic SNPs and epigenetics with Seeking Health (2017 to 2018) and presented StrateGene SNP reports.</li><li><b>Public health:</b> reported Lyme disease and other reportable infections to the health department when lab results detected them.</li></ul>
+      <ul><li><b>Evidence grading:</b> every claim rated established, plausible, or speculative, and traced to a verified primary source.</li><li><b>Literature synthesis:</b> researched complex cases in PubMed, with UpToDate for clinical context; for a <span class="nw">co-managed</span> pediatric case, presented staged plans with full citations to the physician and family.</li><li><b>Lab integration and translation:</b> <span class="nw">GI-MAP</span>, Doctor's Data, and Genova stool analyses, organic acids, and conventional labs read against optimal ranges as one clinical picture.</li></ul>
+      <details class="full"><summary>Show 3 more</summary>
+        <ul><li><b>Medication expertise:</b> prescription review for safety, interactions, and appropriateness, plus <span class="nw">drug-nutrient</span> and <span class="nw">drug-supplement</span> interactions.</li><li><b>Nutrigenomics:</b> trained in genetic SNPs and epigenetics with Seeking Health (2017 to 2018) and presented StrateGene SNP reports.</li><li><b>Public health:</b> reported Lyme disease and other reportable infections to the health department when lab results detected them.</li></ul>
+      </details>
     </article>
     <article class="sector">
       <h3 style="margin:0;font-size:16.5px;line-height:1.3">Clinical Content and Education</h3>
-      <ul><li>Built the practice's public-, practitioner-, and <span class="nw">patient-facing</span> education, protocol guides, and <span class="nw">decision-support</span> resources.</li><li>Taught weekly family roundtables and led three <span class="nw">twice-monthly</span> mentorship cohorts for MDs, DOs, and NPs.</li><li>Converted families' repeated questions into standardized onboarding; at Transformation Enzyme, built national HCP training around recurring clinician knowledge gaps.</li><li>Created product information sheets and visuals, plus <span class="nw">co-branded</span> sheets and staff training for a partner office.</li><li>Wrote blog posts and a LinkedIn article; answered questions in a private Slack community and on social media.</li></ul>
+      <ul><li><b>Education systems:</b> built the practice's public-, practitioner-, and <span class="nw">patient-facing</span> education, protocol guides, and <span class="nw">decision-support</span> resources.</li><li><b>Teaching and mentorship:</b> taught weekly family roundtables and led three <span class="nw">twice-monthly</span> mentorship cohorts for MDs, DOs, and NPs.</li><li><b><span class="nw">Needs-based</span> training:</b> converted families' repeated questions into standardized onboarding; at Transformation Enzyme, built national HCP training around recurring clinician knowledge gaps.</li></ul>
+      <details class="full"><summary>Show 2 more</summary>
+        <ul><li><b>Product education:</b> created product information sheets and visuals, plus <span class="nw">co-branded</span> sheets and staff training for a partner office.</li><li><b>Writing and community:</b> wrote blog posts and a LinkedIn article; answered questions in a private Slack community and on social media.</li></ul>
+      </details>
     </article>
     <article class="sector">
       <h3 style="margin:0;font-size:16.5px;line-height:1.3">Healthcare Technology and Platforms</h3>
-      <ul><li><b>Led the EHR migration</b> from HelloHealth to Elation: evaluation, selection, account setup, pilot run, <span class="nw">scheduling-team</span> training, and clinical templates.</li><li><b>Requirements and integration:</b> brought practice needs to Elation's technical team and coordinated outside lab and clinical data into the record.</li><li><b>Hint Health:</b> championed early adoption, set up membership billing and supplement credits, and built the product catalog with storage and handling guidance at the point of use.</li><li>Paired automation with education after judging which tools helped and which created extra work when families were not informed.</li><li><span class="nw">Co-designed</span> the membership enrollment, Zoom orientation, and structured intake (2016 onward) that enabled a rapid move to virtual care during <span class="nw">COVID-19</span>.</li></ul>
+      <ul><li><b>EHR migration:</b> led the migration from HelloHealth to Elation, including evaluation, selection, account setup, a pilot run, <span class="nw">scheduling-team</span> training, and clinical templates.</li><li><b>Requirements and integration:</b> brought practice needs to Elation's technical team and coordinated outside lab and clinical data into the record.</li><li><b>Virtual care readiness:</b> <span class="nw">co-designed</span> the membership enrollment, Zoom orientation, and structured intake (2016 onward) that enabled a rapid move to virtual care during <span class="nw">COVID-19</span>.</li></ul>
+      <details class="full"><summary>Show 2 more</summary>
+        <ul><li><b>Hint Health:</b> championed early adoption, set up membership billing and supplement credits, and built the product catalog with storage and handling guidance at the point of use.</li><li><b>Informed adoption:</b> paired automation with education after judging which tools helped and which created extra work when families were not informed.</li></ul>
+      </details>
     </article>
     <article class="sector">
       <h3 style="margin:0;font-size:16.5px;line-height:1.3"><span class="nw">AI-Directed</span> Building</h3>
-      <ul><li>Directs Claude Code to build applications and dashboards from written specifications, then evaluates the output.</li><li>Writes reusable AI quality rubrics with explicit pass and fail criteria for ATS readability and proofreading.</li><li>Uses Claude, ChatGPT, and Perplexity for deep research and verifies every citation against the primary paper.</li><li>Directed the build of this site and of a pipeline that generates tailored documents from one structured source.</li><li>Prototyped an <span class="nw">AI-assisted</span> lab dashboard that turns lab PDFs into trend data for practitioner review before any change.</li></ul>
+      <ul><li><b><span class="nw">AI-directed</span> builds:</b> directs Claude Code to build applications and dashboards from written specifications, then evaluates the output.</li><li><b>Quality rubrics:</b> writes reusable AI quality rubrics with explicit pass and fail criteria for ATS readability and proofreading.</li><li><b>Clinical data tool:</b> prototyped an <span class="nw">AI-assisted</span> lab dashboard that turns lab PDFs into trend data for practitioner review before any change.</li></ul>
+      <details class="full"><summary>Show 2 more</summary>
+        <ul><li><b>Verified research:</b> uses Claude, ChatGPT, and Perplexity for deep research and verifies every citation against the primary paper.</li><li><b>Document pipeline:</b> directed the build of this site and of a pipeline that generates tailored documents from one structured source.</li></ul>
+      </details>
     </article>
     <article class="sector">
       <h3 style="margin:0;font-size:16.5px;line-height:1.3">Leadership and Operations</h3>
-      <ul><li>Opened the Stonecrest Target pharmacy as Supervising Pharmacist (Pharmacy Manager), 1998 to 2000, and led its Y2K readiness.</li><li>Directed technicians, workflow, staffing, and inventory as pharmacist in charge on <span class="nw">manager-off</span> shifts.</li><li>Earned certification to teach <span class="nw">patient-counseling</span> best practices and delivered a <span class="nw">6-hour</span> CE program to pharmacists across Carolinas districts.</li><li>Resolved prior authorizations and Medicaid claim rejections from the pharmacy side, reviewing formulary alternatives with prescribers.</li><li>Served as the practice's escalation point for clinical and operations questions from staff, the health coach, and schedulers.</li></ul>
+      <ul><li><b>Pharmacy launch:</b> opened the Stonecrest Target pharmacy as Supervising Pharmacist (Pharmacy Manager), 1998 to 2000, and led its Y2K readiness.</li><li><b>Pharmacist in charge:</b> directed technicians, workflow, staffing, and inventory on <span class="nw">manager-off</span> shifts.</li><li><b>Coverage barriers:</b> resolved prior authorizations and Medicaid claim rejections from the pharmacy side, reviewing formulary alternatives with prescribers.</li></ul>
+      <details class="full"><summary>Show 2 more</summary>
+        <ul><li><b>CE trainer:</b> earned certification to teach <span class="nw">patient-counseling</span> best practices and delivered a <span class="nw">6-hour</span> CE program to pharmacists across Carolinas districts.</li><li><b>Practice operations:</b> served as the practice's escalation point for clinical and operations questions from staff, the health coach, and schedulers.</li></ul>
+      </details>
     </article>
   </div>
   <div class="chips" style="margin-top:16px">
@@ -331,63 +395,115 @@ details.full summary::-webkit-details-marker{ display:none; }
   </div>
 
   <h2 id="work-samples">Work samples</h2>
-  <p class="lead" style="margin-top:0">These samples include <span class="nw">parent-education</span> roundtables I designed, researched, and presented, plus claims reviews and evidence explainers. Every clinical claim is cited and verified in PubMed.</p>
-  <div class="subh">Education decks</div>
-  <div class="sectors">
-    <article class="sector">
-      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Histamine, Sleep, and the Nervous System</h3>
-      <p><span class="nw">Mechanism-level</span> pharmacology translated for parents: receptors, sleep, clearance, and safety.</p>
-      <div class="dl">
-        <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Excerpt-Histamine-Sleep-Nervous-System.pdf" target="_blank" rel="noopener">View excerpt <span class="fmt">5 SLIDES</span></a>
-        <div class="singles"><a href="Deborah-M-Burke-Allen-Work-Sample-Histamine-Sleep-Nervous-System.pdf" target="_blank" rel="noopener">Full deck, 9 slides</a></div>
-      </div>
-    </article>
-    <article class="sector">
-      <h3 style="margin:0;font-size:16.5px;line-height:1.3">The Science Behind Inflammatory Foods</h3>
-      <p>Gut barrier science, added sugar, food dyes, and elimination diets, each tied to a verified study.</p>
-      <div class="dl">
-        <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Excerpt-Science-Behind-Inflammatory-Foods.pdf" target="_blank" rel="noopener">View excerpt <span class="fmt">5 SLIDES</span></a>
-        <div class="singles"><a href="Deborah-M-Burke-Allen-Work-Sample-Science-Behind-Inflammatory-Foods.pdf" target="_blank" rel="noopener">Full deck, 14 slides</a></div>
-      </div>
-    </article>
-    <article class="sector">
-      <h3 style="margin:0;font-size:16.5px;line-height:1.3">The Why Behind Testing</h3>
-      <p>How reference ranges work, a worked lab example, and what can skew a result.</p>
-      <div class="dl">
-        <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Excerpt-Why-Behind-Testing.pdf" target="_blank" rel="noopener">View excerpt <span class="fmt">5 SLIDES</span></a>
-        <div class="singles"><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Testing.pdf" target="_blank" rel="noopener">Full deck, 9 slides</a></div>
-      </div>
-    </article>
-    <article class="sector">
-      <h3 style="margin:0;font-size:16.5px;line-height:1.3">The Why Behind Supplements</h3>
-      <p>A pharmacist's framework for supplement quality, evidence, and drug interactions.</p>
-      <div class="dl">
-        <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Excerpt-Why-Behind-Supplements.pdf" target="_blank" rel="noopener">View excerpt <span class="fmt">5 SLIDES</span></a>
-        <div class="singles"><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Supplements.pdf" target="_blank" rel="noopener">Full deck, 9 slides</a></div>
-      </div>
-    </article>
-  </div>
+  <p class="lead" style="margin-top:0">These samples include 2026 claims reviews of my own product sheets, an evidence explainer, and <span class="nw">evidence-verified</span> 2026 editions of <span class="nw">parent-education</span> roundtables I designed, researched, and presented. Every clinical claim is cited and verified in PubMed.</p>
   <div class="subh">Claims and evidence reviews</div>
   <div class="sectors claims">
     <article class="sector">
+      <a class="thumb doc" href="Deborah-M-Burke-Allen-Claims-Review-Omega-3-Fish-Oil.pdf" target="_blank" rel="noopener"><img src="thumb-claims-omega3.jpg" loading="lazy" decoding="async" width="480" height="622" alt="First page of the omega-3 fish oil claims review work sample"></a>
       <h3 style="margin:0;font-size:16.5px;line-height:1.3">Claims Review: <span class="nw">Omega-3</span> Fish Oil</h3>
-      <p>A product sheet held to DSHEA structure/function limits: each claim kept, rewritten, or removed, with <span class="nw">PubMed-verified</span> reasons.</p>
+      <p>A product sheet held to DSHEA structure/function limits: each claim kept, rewritten, or removed, with <span class="nw">PubMed-verified</span> reasons. Of 13 claims, I removed 4, rewrote 6, and kept 3.</p>
       <div class="dl">
         <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Claims-Review-Omega-3-Fish-Oil.pdf" target="_blank" rel="noopener">View PDF <span class="fmt">2 PAGES</span></a>
       </div>
     </article>
     <article class="sector">
+      <a class="thumb doc" href="Deborah-M-Burke-Allen-Claims-Review-Probiotic-Strain.pdf" target="_blank" rel="noopener"><img src="thumb-claims-299v.jpg" loading="lazy" decoding="async" width="480" height="622" alt="First page of the single-strain probiotic claims review work sample"></a>
       <h3 style="margin:0;font-size:16.5px;line-height:1.3">Claims Review: <span class="nw">Single-Strain</span> Probiotic</h3>
-      <p><span class="nw">Strain-specific</span> evidence review of an <span style="white-space:nowrap">L. plantarum</span> 299v product sheet, before and after, with the compliant version.</p>
+      <p>This <span class="nw">strain-specific</span> evidence review shows an <span style="white-space:nowrap">L. plantarum</span> 299v product sheet before and after revision. Of 16 claims, I removed 7, rewrote 8, and kept 1.</p>
       <div class="dl">
         <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Claims-Review-Probiotic-Strain.pdf" target="_blank" rel="noopener">View PDF <span class="fmt">2 PAGES</span></a>
       </div>
     </article>
     <article class="sector">
+      <a class="thumb doc" href="Deborah-M-Burke-Allen-Omega-3-Explainer-and-Claim-Red-Flags.pdf" target="_blank" rel="noopener"><img src="thumb-omega3-explainer.jpg" loading="lazy" decoding="async" width="480" height="622" alt="First page of the omega-3 explainer and claim red flags work sample"></a>
       <h3 style="margin:0;font-size:16.5px;line-height:1.3"><span class="nw">Omega-3</span> Explainer and Claim Red Flags</h3>
       <p>Mechanisms, absorption, and what the trials show, plus the supplement phrases that outrun the evidence.</p>
       <div class="dl">
         <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Omega-3-Explainer-and-Claim-Red-Flags.pdf" target="_blank" rel="noopener">View PDF <span class="fmt">2 PAGES</span></a>
+      </div>
+    </article>
+  </div>
+  <div class="subh">Education decks: the nine-part roundtable series</div>
+  <div class="sectors">
+    <article class="sector">
+      <a class="thumb" href="Deborah-M-Burke-Allen-Excerpt-Why-Behind-Supplements.pdf" target="_blank" rel="noopener"><img src="thumb-supplements.jpg" loading="lazy" decoding="async" width="480" height="269" alt="First slide of the the why behind supplements work sample"></a>
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">The Why Behind Supplements</h3>
+      <p>This deck teaches a pharmacist's five questions for judging a supplement's need, evidence, quality, dose, and safety.</p>
+      <div class="dl">
+        <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Excerpt-Why-Behind-Supplements.pdf" target="_blank" rel="noopener">View excerpt <span class="fmt">5 SLIDES</span></a>
+        <div class="singles"><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Supplements.pdf" target="_blank" rel="noopener">Full deck, 24 slides</a></div>
+      </div>
+    </article>
+    <article class="sector">
+      <a class="thumb" href="Deborah-M-Burke-Allen-Excerpt-Why-Behind-Testing.pdf" target="_blank" rel="noopener"><img src="thumb-testing.jpg" loading="lazy" decoding="async" width="480" height="269" alt="First slide of the the why behind testing work sample"></a>
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">The Why Behind Testing</h3>
+      <p>This deck explains how reference ranges work, why more tests mean more false flags, and how to match the test to the question.</p>
+      <div class="dl">
+        <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Excerpt-Why-Behind-Testing.pdf" target="_blank" rel="noopener">View excerpt <span class="fmt">5 SLIDES</span></a>
+        <div class="singles"><a href="Deborah-M-Burke-Allen-Work-Sample-Why-Behind-Testing.pdf" target="_blank" rel="noopener">Full deck, 24 slides</a></div>
+      </div>
+    </article>
+    <article class="sector">
+      <a class="thumb" href="Deborah-M-Burke-Allen-Excerpt-Gut-and-Digestion.pdf" target="_blank" rel="noopener"><img src="thumb-gut-digestion.jpg" loading="lazy" decoding="async" width="480" height="269" alt="First slide of the the gut and digestion work sample"></a>
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">The Gut and Digestion</h3>
+      <p>This deck follows digestion as a relay, explains the one-cell gut barrier, and shows how the gut teaches tolerance.</p>
+      <div class="dl">
+        <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Excerpt-Gut-and-Digestion.pdf" target="_blank" rel="noopener">View excerpt <span class="fmt">5 SLIDES</span></a>
+        <div class="singles"><a href="Deborah-M-Burke-Allen-Work-Sample-Gut-and-Digestion.pdf" target="_blank" rel="noopener">Full deck, 24 slides</a></div>
+      </div>
+    </article>
+    <article class="sector">
+      <a class="thumb" href="Deborah-M-Burke-Allen-Excerpt-Gut-Brain-Connection.pdf" target="_blank" rel="noopener"><img src="thumb-gut-brain.jpg" loading="lazy" decoding="async" width="480" height="269" alt="First slide of the the gut-brain connection work sample"></a>
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">The Gut-Brain Connection</h3>
+      <p>This deck maps the four routes that link the gut and the brain and separates established findings from early research.</p>
+      <div class="dl">
+        <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Excerpt-Gut-Brain-Connection.pdf" target="_blank" rel="noopener">View excerpt <span class="fmt">5 SLIDES</span></a>
+        <div class="singles"><a href="Deborah-M-Burke-Allen-Work-Sample-Gut-Brain-Connection.pdf" target="_blank" rel="noopener">Full deck, 23 slides</a></div>
+      </div>
+    </article>
+    <article class="sector">
+      <a class="thumb" href="Deborah-M-Burke-Allen-Excerpt-Histamine-Sleep-Nervous-System.pdf" target="_blank" rel="noopener"><img src="thumb-histamine.jpg" loading="lazy" decoding="async" width="480" height="269" alt="First slide of the histamine, sleep, and the nervous system work sample"></a>
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Histamine, Sleep, and the Nervous System</h3>
+      <p>This deck explains what histamine does at each receptor, why it keeps children awake, and how its load builds and clears.</p>
+      <div class="dl">
+        <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Excerpt-Histamine-Sleep-Nervous-System.pdf" target="_blank" rel="noopener">View excerpt <span class="fmt">5 SLIDES</span></a>
+        <div class="singles"><a href="Deborah-M-Burke-Allen-Work-Sample-Histamine-Sleep-Nervous-System.pdf" target="_blank" rel="noopener">Full deck, 24 slides</a></div>
+      </div>
+    </article>
+    <article class="sector">
+      <a class="thumb" href="Deborah-M-Burke-Allen-Excerpt-Science-Behind-Inflammatory-Foods.pdf" target="_blank" rel="noopener"><img src="thumb-inflammatory-foods.jpg" loading="lazy" decoding="async" width="480" height="269" alt="First slide of the the science behind inflammatory foods work sample"></a>
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">The Science Behind Inflammatory Foods</h3>
+      <p>This deck ties gut barrier science, added sugar, food dyes, and ultra-processed foods to the studies behind each claim.</p>
+      <div class="dl">
+        <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Excerpt-Science-Behind-Inflammatory-Foods.pdf" target="_blank" rel="noopener">View excerpt <span class="fmt">5 SLIDES</span></a>
+        <div class="singles"><a href="Deborah-M-Burke-Allen-Work-Sample-Science-Behind-Inflammatory-Foods.pdf" target="_blank" rel="noopener">Full deck, 24 slides</a></div>
+      </div>
+    </article>
+    <article class="sector">
+      <a class="thumb" href="Deborah-M-Burke-Allen-Excerpt-Cellular-Health-Supporting-Detox.pdf" target="_blank" rel="noopener"><img src="thumb-cellular-detox.jpg" loading="lazy" decoding="async" width="480" height="269" alt="First slide of the cellular health and supporting detox work sample"></a>
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Cellular Health and Supporting Detox</h3>
+      <p>This deck presents detox as the body's own clearance work, from liver chemistry and bile flow to daily habits that lower exposure.</p>
+      <div class="dl">
+        <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Excerpt-Cellular-Health-Supporting-Detox.pdf" target="_blank" rel="noopener">View excerpt <span class="fmt">5 SLIDES</span></a>
+        <div class="singles"><a href="Deborah-M-Burke-Allen-Work-Sample-Cellular-Health-Supporting-Detox.pdf" target="_blank" rel="noopener">Full deck, 24 slides</a></div>
+      </div>
+    </article>
+    <article class="sector">
+      <a class="thumb" href="Deborah-M-Burke-Allen-Excerpt-Mold-Home-Environment.pdf" target="_blank" rel="noopener"><img src="thumb-mold-home.jpg" loading="lazy" decoding="async" width="480" height="269" alt="First slide of the mold work sample"></a>
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Mold: Testing, Investigating, and Optimizing Your Home Environment</h3>
+      <p>This deck walks families from finding the water source to testing with purpose, and it separates proven care from debated tests.</p>
+      <div class="dl">
+        <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Excerpt-Mold-Home-Environment.pdf" target="_blank" rel="noopener">View excerpt <span class="fmt">5 SLIDES</span></a>
+        <div class="singles"><a href="Deborah-M-Burke-Allen-Work-Sample-Mold-Home-Environment.pdf" target="_blank" rel="noopener">Full deck, 24 slides</a></div>
+      </div>
+    </article>
+    <article class="sector">
+      <a class="thumb" href="Deborah-M-Burke-Allen-Excerpt-Immune-Resilience.pdf" target="_blank" rel="noopener"><img src="thumb-immune.jpg" loading="lazy" decoding="async" width="480" height="269" alt="First slide of the immune resilience work sample"></a>
+      <h3 style="margin:0;font-size:16.5px;line-height:1.3">Immune Resilience: Colds, Viruses, and Allergies</h3>
+      <p>This deck explains how a child's immune system learns, which everyday layers of protection work, and when to call the doctor.</p>
+      <div class="dl">
+        <a class="btn solid wide-btn" href="Deborah-M-Burke-Allen-Excerpt-Immune-Resilience.pdf" target="_blank" rel="noopener">View excerpt <span class="fmt">5 SLIDES</span></a>
+        <div class="singles"><a href="Deborah-M-Burke-Allen-Work-Sample-Immune-Resilience.pdf" target="_blank" rel="noopener">Full deck, 24 slides</a></div>
       </div>
     </article>
   </div>
